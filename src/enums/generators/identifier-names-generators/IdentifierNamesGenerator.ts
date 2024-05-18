@@ -5,9 +5,11 @@ export const IdentifierNamesGenerator: Readonly<{
     HexadecimalIdentifierNamesGenerator: 'hexadecimal';
     MangledIdentifierNamesGenerator: 'mangled';
     MangledShuffledIdentifierNamesGenerator: 'mangled-shuffled';
+	IncrementalIdentifierNamesGenerator: 'incremental';
 }> = Utils.makeEnum({
     DictionaryIdentifierNamesGenerator: 'dictionary',
     HexadecimalIdentifierNamesGenerator: 'hexadecimal',
     MangledIdentifierNamesGenerator: 'mangled',
-    MangledShuffledIdentifierNamesGenerator: 'mangled-shuffled'
+    MangledShuffledIdentifierNamesGenerator: 'mangled-shuffled',
+	IncrementalIdentifierNamesGenerator: 'incremental'
 });

@@ -65,10 +65,10 @@ module.exports = {
         }),
         new ESLintPlugin({
             files: 'src/**/*.ts'
-        }),
-        new ForkTsCheckerNotifierWebpackPlugin({
-            skipFirstNotification: true
         })
+        //new ForkTsCheckerNotifierWebpackPlugin({
+        //    skipFirstNotification: true
+        //}) // wtf no
     ],
     output: {
         libraryTarget:  'commonjs2'
