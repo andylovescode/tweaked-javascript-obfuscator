@@ -48,6 +48,7 @@ export const DEFAULT_PRESET: TInputOptions = Object.freeze({
     sourceMapFileName: '',
     sourceMapMode: SourceMapMode.Separate,
     sourceMapSourcesMode: SourceMapSourcesMode.SourcesContent,
+	switchIIFEObjects: true,
     splitStrings: false,
     splitStringsChunkLength: 10,
     stringArray: true,

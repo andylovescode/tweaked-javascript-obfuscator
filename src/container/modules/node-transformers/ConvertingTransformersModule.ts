@@ -21,6 +21,7 @@ import { ObjectExpressionTransformer } from '../../../node-transformers/converti
 import { ObjectPatternPropertiesTransformer } from '../../../node-transformers/converting-transformers/ObjectPatternPropertiesTransformer';
 import { SplitStringTransformer } from '../../../node-transformers/converting-transformers/SplitStringTransformer';
 import { TemplateLiteralTransformer } from '../../../node-transformers/converting-transformers/TemplateLiteralTransformer';
+import { SwitchStatementTransformer } from '../../../node-transformers/converting-transformers/SwitchStatementTransformer';
 
 export const convertingTransformersModule: interfaces.ContainerModule = new ContainerModule((bind: interfaces.Bind) => {
     // converting transformers
@@ -64,6 +65,10 @@ export const convertingTransformersModule: interfaces.ContainerModule = new Cont
         .to(SplitStringTransformer)
         .whenTargetNamed(NodeTransformer.SplitStringTransformer);
 
+	bind<INodeTransformer>(ServiceIdentifiers.INodeTransformer)
+        .to(SwitchStatementTransformer)
+        .whenTargetNamed(NodeTransformer.SwitchStatementTransformer);
+	
     bind<INodeTransformer>(ServiceIdentifiers.INodeTransformer)
         .to(TemplateLiteralTransformer)
         .whenTargetNamed(NodeTransformer.TemplateLiteralTransformer);

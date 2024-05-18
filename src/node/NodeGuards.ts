@@ -535,6 +535,14 @@ export class NodeGuards {
         return node.type === NodeType.SwitchCase;
     }
 
+	/**
+     * @param {Node} node
+     * @returns {boolean}
+     */
+	public static isSwitchStatementNode (node: ESTree.Node): node is ESTree.SwitchStatement {
+		return node.type === NodeType.SwitchStatement;
+	}
+
     /**
      * @param {Node} node
      * @returns {boolean}

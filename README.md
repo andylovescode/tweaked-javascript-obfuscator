@@ -1072,6 +1072,11 @@ Allows to control `sources` and `sourcesContent` fields of the source map:
 * `sources-content` - adds dummy `sources` field, adds `sourcesContent` field with the original source code;
 * `sources` - adds `sources` field with a valid source description, does not add `sourcesContent` field. When using NodeJS API it's required to define `inputFileName` option that will be used as `sources` field value.
 
+### `switchIIFEObjects`
+Type: `boolean` Default: `true`
+
+Turns switch statements into object indexing
+
 ### `splitStrings`
 Type: `boolean` Default: `false`
 
