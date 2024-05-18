@@ -79,12 +79,12 @@ export class SwitchStatementTransformer extends AbstractNodeTransformer {
 		}
 
 		// Generate the case table (and collect the default)
-		let defaultCase = NodeFactory.functionExpressionNode([], NodeFactory.blockStatementNode([]));
+		let defaultCase = NodeFactory.arrowFunctionExpressionNode([], NodeFactory.blockStatementNode([]));
 
 		const caseTable = NodeFactory.objectExpressionNode([]);
 
 		for (const cas of switchStatementNode.cases) {
-			const caseFunction = NodeFactory.functionExpressionNode([], NodeFactory.blockStatementNode(cas.consequent.slice(0, -2)));
+			const caseFunction = NodeFactory.arrowFunctionExpressionNode([], NodeFactory.blockStatementNode(cas.consequent.slice(0, -2)));
 
 			if (!cas.test) {
 				defaultCase = caseFunction;

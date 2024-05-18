@@ -332,6 +332,25 @@ export class NodeFactory {
         };
     }
 
+	/**
+     * @param {Identifier[]} params
+     * @param {BlockStatement} body
+     * @returns {ArrowFunctionExpression}
+     */
+	public static arrowFunctionExpressionNode (
+		params: ESTree.Pattern[],
+		body: ESTree.BlockStatement
+	): ESTree.ArrowFunctionExpression {
+		return {
+			type: NodeType.ArrowFunctionExpression,
+			params,
+			body,
+			generator: false,
+			metadata: { ignoredNode: false },
+			expression: false
+		};
+	}
+
     /**
      * @param {ESTree.Expression} test
      * @param {ESTree.Statement} consequent
